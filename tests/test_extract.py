@@ -2,10 +2,10 @@ import os
 import sys
 import unittest
 from io import StringIO
-
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from stamping.extract import extract_watermark
 
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
 
 class TestExtract(unittest.TestCase):
     def setUp(self):
@@ -19,6 +19,7 @@ class TestExtract(unittest.TestCase):
         extract_watermark(self.test_file)
         sys.stdout = sys.__stdout__  # Reset stdout
         output = captured_output.getvalue()
+        print(output.strip())
         self.assertIn("Watermark:", output)  # Ensure watermark is detected
 
     def tearDown(self):
