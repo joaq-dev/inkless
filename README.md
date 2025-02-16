@@ -1,8 +1,8 @@
-# **Code Watermarking & Similarity Detection System**
+# **Inkless: Code Stamping & Similarity Detection System**
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue) ![License](https://img.shields.io/badge/License-MIT-green) ![Status](https://img.shields.io/badge/Status-Active-brightgreen)
 
-A lightweight and efficient watermarking system for source code files, designed for side projects and personal use. This tool embeds **hidden signatures** in `.py`, `.c`, `.cpp`, `.mlx`, and `.m` files using **comment-based and whitespace encoding techniques** (dashes/underscores). Additionally, it provides a **checker** to detect copied or modified versions of your code.
+A lightweight and efficient stamping system for source code files, designed for side projects and personal use. This tool embeds **hidden signatures** in `.py`, `.c`, `.cpp`, `.mlx`, and `.m` files using **comment-based and whitespace encoding techniques** (dashes/underscores). Additionally, it provides a **checker** to detect copied or modified versions of your code.
 
 ---
 
