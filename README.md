@@ -9,7 +9,7 @@ A lightweight and efficient watermarking system for source code files, designed 
 ## **🔹 Features**  
 ✅ **Embeds a unique watermark** in code files  
 ✅ **Compatible with multiple languages** (`.py`, `.c`, `.cpp`, `.mlx`, `.m`)  
-✅ **Uses comment-based + invisible whitespace encoding**  
+✅ **Uses comment-based + invisible pattern encoding**  
 ✅ **Detects code similarity** even after modifications  
 ✅ **Warns if the watermark has been tampered with**  
 ✅ **Lightweight & easy to integrate into side projects**  
@@ -58,7 +58,7 @@ Compares two files and reports if one is a modified version of the other.
 ## **🛠 How It Works**  
 
 🔹 **Comment-Based Watermarking:** Adds an identifier in comments (`#`, `//`, `%`).  
-🔹 **Whitespace Encoding:** Converts the watermark into **dashes (`-`) and underscores (`_`)** and embeds it invisibly.  
+🔹 **Pattern Encoding:** Converts the watermark into **dashes (`-`) and underscores (`_`)** and embeds it invisibly.  
 🔹 **Similarity Detection:** Uses **hash matching & AST comparison** to detect copied code.  
 
 ---
