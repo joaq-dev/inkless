@@ -52,6 +52,7 @@ Displays the **embedded watermark**, if present.
 python main.py --check check_folder
 ```
 Compares two files and reports if one is a modified version of the other.
+
 ---
 
 ### **4️⃣ Verify and check authorization**  
