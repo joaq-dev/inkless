@@ -6,7 +6,7 @@ def generate_watermark(name, email, signature):
     data = f"{name}-{email}-{signature}"
     return hashlib.sha256(data.encode()).hexdigest()[:16]
 
-SUPPORTED_EXTENSIONS = {".py": "#", ".c": "//", ".cpp": "//", ".mlx": "%", ".m": "%"}
+SUPPORTED_EXTENSIONS = {".py": "#", ".c": "//", ".cpp": "//", ".mlx": "%", ".m": "%", ".v": "//" }
 
 ENCODING_SYMBOLS = ["-", "_"]  # Use dashes and underscores for encoding
 

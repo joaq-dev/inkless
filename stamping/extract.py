@@ -1,6 +1,6 @@
 import os
 
-SUPPORTED_EXTENSIONS = {".py": "#", ".c": "//", ".cpp": "//", ".mlx": "%", ".m": "%"}
+SUPPORTED_EXTENSIONS = {".py": "#", ".c": "//", ".cpp": "//", ".mlx": "%", ".m": "%", ".v": "//"}
 
 ENCODING_SYMBOLS = ["-", "_"]  # Use dashes and underscores for encoding
 
