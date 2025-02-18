@@ -19,7 +19,7 @@ A lightweight and efficient stamping system for source script files, designed fo
 ## **📌 Installation**  
 1. Clone the repository:  
    ```bash
-   git clone https://github.com/your-username/watermarking-tool.git
+   git clone https://github.com/joaq-dev/watermarking-tool.git
    cd watermarking-tool
    ```
 2. Install dependencies:  
