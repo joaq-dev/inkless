@@ -1,3 +1,3 @@
 #!/bin/bash
-conda activate environment env
+conda activate env
 pip install -r requirements.txt
