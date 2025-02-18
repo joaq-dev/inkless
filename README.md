@@ -30,10 +30,10 @@ A lightweight and efficient stamping system for source script files, designed fo
 ---
 
 ## **🚀 Usage**  
-
-### **1️⃣ Embed a Watermark in a Code File**  
+Create a folder to place your files
+### **1️⃣ Embed a Watermark in a Code Files**  
 ```bash
-python main.py --embed folder file.py(w&w/out) --name "Your Name" --email "you@example.com" --signature "ProjectX"
+python main.py --embed folder --name "Your Name" --email "you@example.com" --signature "ProjectX"
 ```
 This command modifies `file.py` by adding a **hidden watermark**.
 
@@ -41,7 +41,7 @@ This command modifies `file.py` by adding a **hidden watermark**.
 
 ### **2️⃣ Extract the Watermark from a File**  
 ```bash
-python main.py --extract folder file.py(w&w/out)
+python main.py --extract extract_folder
 ```
 Displays the **embedded watermark**, if present.
 
@@ -49,10 +49,16 @@ Displays the **embedded watermark**, if present.
 
 ### **3️⃣ Check Similarity Between Two Files**  
 ```bash
-python main.py --check folder original.py modified.py
+python main.py --check check_folder
 ```
 Compares two files and reports if one is a modified version of the other.
+---
 
+### **4️⃣ Verify and check authorization**  
+```bash
+python main.py --verify check_folder -name "Your Name" --email "you@example.com" --signature "ProjectX"
+```
+Checks the authorized file keeper.
 ---
 
 ## **🛠 How It Works**  
