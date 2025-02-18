@@ -2,13 +2,13 @@
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue) ![License](https://img.shields.io/badge/License-MIT-green) ![Status](https://img.shields.io/badge/Status-Active-brightgreen)
 
-A lightweight and efficient stamping system for source script files, designed for side projects and personal use. This tool embeds **hidden signatures** in `.py`, `.c`, `.cpp`, `.m/.mlx`, .and `.v` files using **comment-based and pattern encoding techniques** (dashes/underscores). Additionally, it provides a **checker** to detect copied or modified versions of your scripts.
+A lightweight and efficient stamping system for source script files, designed for side projects and personal use. This tool embeds **hidden signatures** in `.py`, `.c`, `.cpp`, `.m`, .and `.v` files using **comment-based and pattern encoding techniques** (dashes/underscores). Additionally, it provides a **checker** to detect copied or modified versions of your scripts.
 
 ---
 
 ## **🔹 Features**  
 ✅ **Embeds a unique watermark** in code files  
-✅ **Compatible with multiple languages** (`.py`, `.c`, `.cpp`, `.m/.mlx`, `.v`)  
+✅ **Compatible with multiple languages** (`.py`, `.c`, `.cpp`, `.m`, `.v`)  
 ✅ **Uses comment-based + invisible pattern encoding**  
 ✅ **Detects code similarity** even after modifications  
 ✅ **Warns if the watermark has been tampered with**  
