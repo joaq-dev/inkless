@@ -59,6 +59,7 @@ Compares two files and reports if one is a modified version of the other.
 python main.py --verify check_folder -name "Your Name" --email "you@example.com" --signature "ProjectX"
 ```
 Checks the authorized file keeper.
+
 ---
 
 ## **🛠 How It Works**  
