@@ -23,25 +23,26 @@ def extract_watermark(filename):
         lines = f.readlines()
 
     watermark_found = False
-    partial_watermark_detected = False
     extracted_watermark = ""
+    encoded_watermark_found = False
+    extracted_encoded_watermark = ""
 
+    # Look for the hidden comment watermark (e.g., /* marker: abc123xyz */)
     for line in lines:
-        print(f"DEBUG: Checking line -> '{line.strip()}'")  # Debugging line
-
-        if "Watermark:" in line:
+        if "marker:" in line:
+            # Extract everything after "marker:"
+            start_idx = line.find("marker:") + len("marker:")
+            extracted_watermark = line[start_idx:].strip().replace("*/", "").strip()
+            print("Extracted Watermark (Hidden Comment):", extracted_watermark)
             watermark_found = True
-            extracted_watermark = line.strip()
-            print("Extracted Watermark:", extracted_watermark)
-            break
-        elif all(char in ENCODING_SYMBOLS for char in line.strip()):  # Detect encoded watermark pattern
-            extracted_watermark = decode_from_pattern(line.strip())
-            if extracted_watermark.isalnum():  # Ensure it's a valid watermark
-                partial_watermark_detected = True
-                print("Extracted Watermark (Whitespace Encoded):", extracted_watermark)
-                break
 
-    if not watermark_found and not partial_watermark_detected:
+        # Look for a pattern of dashes and underscores prefixed by "_sigil_"
+        if "_sigil_" in line:
+            encoded_watermark_found = True
+            extracted_encoded_watermark = line.split("_sigil_")[1].strip()
+            print("Extracted Watermark (Encoded):", extracted_encoded_watermark)
+            decoded_watermark = decode_from_pattern(extracted_encoded_watermark)
+            print("Decoded Watermark:", decoded_watermark)
+
+    if not watermark_found and not encoded_watermark_found:
         print("No watermark found in", filename)
-    elif partial_watermark_detected:
-        print("⚠ Warning: Watermark might have been tampered with!")
